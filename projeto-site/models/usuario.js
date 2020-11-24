@@ -6,7 +6,7 @@ https://codewithhugo.com/sequelize-data-types-a-practical-guide/
 */
 
 module.exports = (sequelize, DataTypes) => {
-    let Usuario = sequelize.define('cadastro',{
+    let Usuario = sequelize.define('Usuario',{
 		idCadastro: {
 			field: 'idCadastro',
 			type: DataTypes.INTEGER,
@@ -32,15 +32,10 @@ module.exports = (sequelize, DataTypes) => {
 			field: 'nickname',
 			type: DataTypes.STRING,
 			allowNull: false
-		},
-		perfil: {
-			field: 'perfil',
-			type: DataTypes.STRING,
-			allowNull: false
 		}
 	}, 
 	{
-		tableName: 'cadastro', 
+		tableName: 'Usuario', 
 		freezeTableName: true, 
 		underscored: true,
 		timestamps: false,
