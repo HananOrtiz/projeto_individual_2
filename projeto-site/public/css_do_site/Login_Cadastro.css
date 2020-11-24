@@ -1,0 +1,125 @@
+body{
+    background-color: #333;
+    background-image: url(../imagens/pexels-jessica-lewis-583846.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.cerca_cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 99vh;
+    width: 99%;
+}
+.cerca_cadastro > span{
+    font: bold 44px Pacifico;
+}
+.cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 60vw;
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 9px;
+} 
+.cadastro span{
+    font: 600 18px Righteous;
+}
+.div_input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+    border-radius: 8px;
+    width: 25%;
+    background-color: white;
+    border: 2px solid black;
+}
+.div_input:hover{
+    transform: scale(1.1);
+}
+.div_input input{
+    border: 0;
+    padding: 5px;
+    font: 600 12px Arial;
+    cursor: pointer;
+}
+.div_input .far{
+    position: relative;
+    right: 3px;
+    cursor: pointer;
+}
+.div_input .far:hover{
+    transform: scale(1.15);
+}
+.div_input .fas{
+    position: relative;
+    bottom: 7px;
+}
+.div_input select{
+    flex: 1;
+    border: 0;
+}
+.button_cad{
+    font: 400 15px Pacifico;
+    padding: 3px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(2,100,255,0.3);
+    cursor: pointer;
+}
+.button_cad:hover{
+    background-color: #30B3C7;
+    transform: scale(1.12);
+}
+.tem_conta{
+    opacity: 0.8;
+}
+.tem_conta:hover{
+    font-weight: 800;
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.user{
+    flex:1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_{
+    flex:0.7;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fazer_login{
+    font: 400 15px Pacifico;
+    padding: 3px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(2,100,255,0.3);
+    cursor: pointer;
+}
+.fazer_login:hover{
+    background-color: #30B3C7;
+    transform: scale(1.12);
+}
+.nao_tem_conta{
+    opacity: 0.8;
+}
+.nao_tem_conta:hover{
+    font-weight: 800;
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.2);
+}

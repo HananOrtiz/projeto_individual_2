@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - BS</title>
+
+    <link rel="stylesheet" href="./css_do_site/global.css">
+    <link rel="stylesheet" href="css_do_site/Pag-Inicial.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3da87a59e6.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- INICIO DO TOPO DO SITE-->
+    <div class="container">
+        <div class="cabecario">
+            <span class="nome_jornal">
+                <span class="BS">B</span>and<span class="BS">S</span>tudents
+            </span>
+            <ul class="ul_cabecario">
+                <li class="li_cabecario"><span class="span_li">Pagina Inicial</span></li>
+                <li class="li_cabecario">
+                    <span class="span_li">
+                        <a href="Login_Cadastro.html">Cadastro/Login</a>
+                    </span>
+                </li>
+                <li class="li_cabecario"><span class="span_li">
+                        <span>
+                            <i  id="icon_menu"  onclick="exibir_menu()" class= " fas fa-bars "></i>
+                        </span>
+                </li>
+            </ul>
+            <ul id="dropbox" class="dropbox">
+                <li><span class="menu"><a href="Sobre_Fundador.html">Sobre Fundador</a></span></li> <br>
+                <li><span class="menu">Novidades</span></li> <br>
+                <li><span class="menu">Notícias</span></li>
+            </ul>
+        </div>
+    </div>
+    <!--FIM DO TOPO DO SITE-->
+
+    <!--INICIO DO CORPO-->
+    <div class="cerca">
+        <!--primeiro quadro-->
+        <div class="quadro_um">
+            <div class="div_sobre_o_site">
+                <div class="sobre_left">
+                    <h1 class="titulo_sobre_nos">Sobre o
+                        <span class="BS">B</span>and<span class="BS">S</span>tudents
+                    </h1>
+                    <span class="texto_sobre_nos">
+                        O jornal BandStudents, carinhosamente chamado de "BS", foi criado com o
+                        intuito de ajudar os novos aventureiros no mundo da tecnologia a manterem-se
+                        o mais atualizados possível! <br>
+                        Sendo assim, estando conectado com o BS você estará também conectado as mais
+                        recentes novidades e também, poderá compartilhar, agregar e adquirir
+                        maior conhecimento sobre programação e tecnologia.
+                    </span>
+                </div>
+                <div class="sobre_center">
+                </div>
+                <div class="sobre_right">
+                    <div class="retrato_lounge">
+                        <img src="./imagens/img_lounge.jpg" alt="" class="img_lounge">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fim do primeiro quadro-->
+
+    <!-- INICIO Área de contatos/suporte, etc... -->
+    <div class="rodape">
+        <div class="rodape_left">
+            <span class="contatos">
+                <i class="fab fa-github" style="font-size: 35px;color: white;"></i>
+                Hanan Ortiz
+                </span> <br>
+                <span class="information">
+                    Acompanhe meus projetos e desenvolvimento na área da tecnologia
+                    através da minha conta no github
+                </span>
+    
+        </div>
+        <div class="rodape_center">
+            <span class="contatos">
+                <i class="fab fa-linkedin" style="font-size: 35px;"></i>
+                hanan_ferreira
+            </span>
+        </div>
+        <div class="rodape_right">
+            <span class="contatos">
+                <i class="fab fa-instagram" style="font-size: 35px;"></i>
+                hananortiz02
+            </span>
+        </div>
+    </div>
+    <!--FIM DO CORPO-->
+
+</body>
+
+</html>
+<script>
+    var dropar = false;
+    function exibir_menu() {
+        if (dropar) {
+            dropbox.style.display = 'none';
+        } else {
+            dropbox.style.display = 'flex';
+        }
+        dropar = !dropar;
+    }
+</script>

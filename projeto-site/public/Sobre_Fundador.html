@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Fundador - BS</title>
+
+    <link rel="stylesheet" href="./css_do_site/global.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3da87a59e6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-- INICIO DO TOPO DO SITE-->
+    <div class="container">
+        <div class="cabecario">
+            <span class="nome_jornal">
+                <span class="BS">B</span>and<span class="BS">S</span>tudents
+            </span>
+            <ul class="ul_cabecario">
+                <li class="li_cabecario"><span class="span_li"><a href="./Pag-Inicial.html">Pagina Inicial</a></span>
+                </li>
+                <li class="li_cabecario"><span class="span_li"><a href="./Login_Cadastro.html">Cadastro/Login</a></span></li>
+                <li class="li_cabecario"><span class="span_li">
+                        <i id="icon_menu" onclick="exibir_menu()"  class=" fas fa-bars"></i>
+                    </span>
+                </li>
+            </ul>
+            <ul id="dropbox" class="dropbox">
+                <li><span class="menu"><a href="Sobre_Fundador.html">Sobre Fundador</a></span></li> <br>
+                <li><span class="menu">Novidades</span></li> <br>
+                <li><span class="menu">Notícias</span></li>
+            </ul>
+        </div>
+    </div>
+    <!--FIM DO TOPO DO SITE-->
+
+</body>
+</html>
+<script>
+
+var dropar = false;
+    function exibir_menu() {
+        if (dropar) {
+            dropbox.style.display = 'none';
+        } else {
+            dropbox.style.display = 'flex';
+        }
+        dropar = !dropar;
+    }
+</script>

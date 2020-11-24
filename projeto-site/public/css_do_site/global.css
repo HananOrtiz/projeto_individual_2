@@ -1,0 +1,144 @@
+*{
+    list-style: none;
+    outline: 0;
+    text-decoration: none;    
+    cursor: default;
+}
+a{
+    color: inherit;
+    cursor: pointer;
+}
+body{
+    min-height: 100%;
+    margin: 0;
+}
+
+/* TUDO QUE ESTÁ NO CABECARIO COMEÇA AQUI */
+.container{
+    z-index: 5;
+    position: fixed;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    background: rgb(31,31,33);
+    background: radial-gradient(circle, rgba(31,31,33,1) 10%, rgba(222,216,213,1) 50%, rgba(31,31,33,1) 80%);
+    opacity: 0.8;
+}
+.cabecario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    height: 100%;
+    width: 85%;
+}
+.div_nome_jornal{
+    height: 100%;
+    width: 30%;
+}
+.nome_jornal{
+    font-family: Righteous, cursive;
+    font-size: x-large;
+    font-weight: 600;
+    height: 100%;
+    color: white;
+}
+.nome_jornal:hover{
+    cursor: pointer;
+    color: rgba(173, 11, 79,1);;
+}
+.BS{
+    font-family: Pacifico;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.ul_cabecario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width:30%;
+}
+.span_li{
+    display: flex;align-items: center;
+    font-size: larger;
+    font-weight: 600;
+    color: white;
+}
+.span_li:hover{
+    font-weight: bolder;
+    cursor: pointer;
+    color: rgba(173, 11, 79,1);
+}
+
+
+ul.dropbox{
+display: none;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+background-color: rgba(173, 11, 79,1);
+position: absolute;
+top: 10vh;
+right: 7.5%;
+margin: 0;
+animation: dropar_caixa 1s;
+border-radius: 10px;
+}
+@keyframes dropar_caixa{
+from{
+    transform: translateY(-40px);
+    opacity: 0;
+}
+to{
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+.menu{
+    color: white;
+    font: 600 17px Righteous;
+}
+.menu:hover{
+    color: black;
+    cursor: pointer;
+}
+/* TUDO QUE ESTÁ NO CABECARIO ENCERRA AQUI*/
+
+/* TUDO O QUE ESTÁ NO RODAPE COMEÇA AQUI */
+.rodape{
+    display: flex;
+    height: 200px;
+    background: rgb(31,31,33);
+}
+.rodape_left{
+    height: 100%;
+    width: 30%;
+}
+.rodape_left .information{
+    font: 600 25px Arial;
+    color: white;
+}
+.rodape_center{
+    height: 100%;
+    flex: 1;
+}
+.rodape_right{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+ .contatos{
+    display: flex;
+    align-items: center;
+    font: 700 20px Righteous;
+    color: white;
+    position: relative;
+    width: 50%;
+    left: 10px;
+}

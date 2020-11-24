@@ -1,0 +1,72 @@
+/* TUDO O QUE ESTÁ NO CORPO DO SITE COMECA AQUI */
+.cerca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #30B3C7;
+    background-image: url(../imagens/background_hexagono.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+}.quadro_um{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+}
+.div_sobre_o_site{
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    height: 60%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: transparent;
+
+}
+.sobre_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    height: 66%;
+    width: 40%;
+    border: 3px solid black;
+    border-radius: 25px;
+    background-color: #30B3C7;
+}
+.texto_sobre_nos{
+    font-size: large;
+}
+
+.sobre_center{
+    height: 45vh;
+    border: 1px solid black;   
+}
+.sobre_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+.retrato_lounge{
+    padding: 1%;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+.img_lounge{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.continuacao{
+    height: 100%;
+}
