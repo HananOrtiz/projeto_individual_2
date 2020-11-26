@@ -49,7 +49,7 @@ body{
 }
 .nome_jornal:hover{
     cursor: pointer;
-    color: rgba(173, 11, 79,1);;
+    color: rgba(173, 11, 79,1);
 }
 .BS{
     font-family: Pacifico;
@@ -73,6 +73,9 @@ body{
     font-weight: bolder;
     cursor: pointer;
     color: rgba(173, 11, 79,1);
+}
+.icon_menu{
+    cursor: pointer;
 }
 
 
@@ -120,7 +123,7 @@ to{
     width: 30%;
 }
 .rodape_left .information{
-    font: 600 25px Arial;
+    font: 100 23px Pacifico;
     color: white;
 }
 .rodape_center{
@@ -134,11 +137,15 @@ to{
     flex: 1;
 }
  .contatos{
+     align-self: center;
     display: flex;
     align-items: center;
-    font: 700 20px Righteous;
+    font: 700 21px Righteous;
     color: white;
     position: relative;
     width: 50%;
     left: 10px;
+}
+.information{
+    font: 700 10px Pacifico;
 }

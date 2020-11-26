@@ -1,6 +1,6 @@
 body{
     background-color: #333;
-    background-image: url(../imagens/pexels-jessica-lewis-583846.jpg);
+    background-image: url(../imagens/segunda_opcao.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,8 +25,6 @@ body{
     height: 70vh;
     width: 60vw;
     padding: 4px;
-    border: 2px solid black;
-    border-radius: 9px;
 } 
 .cadastro span{
     font: 600 18px Righteous;
@@ -71,12 +69,10 @@ body{
     padding: 3px;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: rgba(2,100,255,0.3);
     cursor: pointer;
 }
 .button_cad:hover{
-    background-color: #30B3C7;
-    transform: scale(1.12);
+    animation: fazer_login 1s linear;
 }
 .tem_conta{
     opacity: 0.8;
@@ -85,8 +81,9 @@ body{
     font-weight: 800;
     opacity: 1;
     cursor: pointer;
-    transform: scale(1.2);
+    animation: nao_tem_conta 2s linear infinite;
 }
+
 .user{
     flex:1;
     width: 100%;
@@ -102,17 +99,34 @@ body{
     justify-content: center;
     align-items: center;
 }
+.icon_usuario{
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
+}
 .fazer_login{
     font: 400 15px Pacifico;
     padding: 3px;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: rgba(2,100,255,0.3);
     cursor: pointer;
 }
 .fazer_login:hover{
-    background-color: #30B3C7;
     transform: scale(1.12);
+    animation: fazer_login 2s linear;
+}
+@keyframes fazer_login{
+    0% {
+        background-color: white;
+    }
+    50%{
+        background-color: black;
+        color: white;
+    }
+    100%{
+        background-color: white;
+    }
 }
 .nao_tem_conta{
     opacity: 0.8;
@@ -121,5 +135,19 @@ body{
     font-weight: 800;
     opacity: 1;
     cursor: pointer;
-    transform: scale(1.2);
+    animation: nao_tem_conta 2s linear infinite;
+}
+@keyframes nao_tem_conta{
+    0%{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
 }

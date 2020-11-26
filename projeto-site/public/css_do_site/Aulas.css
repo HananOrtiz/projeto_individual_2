@@ -1,0 +1,69 @@
+
+.cerca_aulas{
+    height: 100vh;
+}
+.container_guia_aulas{
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    width: 175px;
+    border-right: 4px solid rgba(173, 11, 79,1);
+}
+/* Listas */
+.espaco_E1{
+    height: 5vh;
+}
+
+.opcoes_de_aula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 89vh;
+    width: 100%;
+}
+/* Linguagem de programação */
+.titulo_categoria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+.drop_lista_linguagem{
+    width: 90%;
+    animation: dropar_lista_linguagens 0.5s linear;
+}
+
+@keyframes dropar_lista_linguagens{
+    from{
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.lista_linguagens{
+    font: 900 20px Radley, serif;
+}
+.lista_linguagens:hover{
+    cursor: pointer;
+    color: rgba(173, 11, 79,1);
+}
+/* fim de linguagns de programação */
+
+/* ArqComp */
+.drop_arq_comp{
+    width: 90%;
+}
+/* fim de ArqComp */
+
+
+/* fim das listas */
+
+/* icones da página */
+.icon_chevron_right:hover{
+    transform: scale(1.1) rotateZ(90deg);
+    cursor: pointer;
+}
