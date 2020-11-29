@@ -1,16 +1,21 @@
 
 .cerca_aulas{
+    display: flex;
     height: 100vh;
 }
 .container_guia_aulas{
     display: flex;
     align-items: flex-end;
-    height: 100%;
-    width: 175px;
+    min-height: 100%;
+    width: 230px;
     border-right: 4px solid rgba(173, 11, 79,1);
+    background-image: url(../imagens/fundo_aula_tecnologia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /* Listas */
 .espaco_E1{
+    width: 100%;
     height: 5vh;
 }
 
@@ -18,22 +23,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 89vh;
+    height: 100%;
     width: 100%;
 }
 /* Linguagem de programação */
+
 .titulo_categoria{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 90%;
 }
+ .o_que_aprender{
+     margin-left: 10%;
+     font: bolder 25px Indie Flower, cursive;
+    color: white;
+}
+.categoria{
+    color: white;
+    font: bolder;
+}
 .drop_lista_linguagem{
+    z-index: 100;
     width: 90%;
-    animation: dropar_lista_linguagens 0.5s linear;
+    animation: dropar_informacao 0.5s linear;
 }
 
-@keyframes dropar_lista_linguagens{
+@keyframes dropar_informacao{
     from{
         transform: translateY(-40px);
         opacity: 0;
@@ -45,6 +61,7 @@
 }
 
 .lista_linguagens{
+    color: white;
     font: 900 20px Radley, serif;
 }
 .lista_linguagens:hover{
@@ -53,14 +70,43 @@
 }
 /* fim de linguagns de programação */
 
+
 /* ArqComp */
 .drop_arq_comp{
     width: 90%;
+    animation: dropar_informacao 0.5s linear;
 }
 /* fim de ArqComp */
 
 
 /* fim das listas */
+
+/* CONTEUDO LADO DIREITO */
+.espaco_E2{
+    height: 10vh;
+    width: 100%;
+}
+.cerca_conteudo{
+    width: 100%;
+    padding: 8px;
+}
+
+.conteudo_pagina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.conteudo_pagina h1{
+    font: bolder 40px Arial, cursive;
+    color: rgba(173, 11, 79,1);
+}
+.introducao{
+    width: 700px;
+    font: 600 20px Radley,serif;
+}
 
 /* icones da página */
 .icon_chevron_right:hover{

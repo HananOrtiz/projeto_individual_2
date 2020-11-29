@@ -1,0 +1,49 @@
+.espacamento{
+    height: 10vh;
+    width: 100%;
+}
+.centralizar_feed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.cerca_feed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 11vh;
+}
+.cerca_feed  h1{
+    font: bolder 40px Arial;
+}
+.caixa_curiosidade1{
+    border: 2px solid;
+    padding: 8px;
+    width: 80%;
+}
+.caixa_curiosidade1 h2{
+    font: 600 27px Righteous;
+    color: red;
+}
+.span_curiosidade{
+    font: 400 22px Righteous;
+}
+.img{
+    width: 450px;
+}
+.span_texto_curiosidade{
+    font: 400 25px Arial,cursive ;
+}
+.caixa_curiosidade2{
+    border: 2px solid;
+    width: 80%;
+    padding: 8px;
+}
+
+
+.caixa_curiosidade2 h2{
+    font: 600 27px Righteous;
+    color: red;
+}

@@ -26,13 +26,13 @@
                 </li>
                 <li class="li_cabecario"><span class="span_li">Cadastro/Login</span></li>
                 <li class="li_cabecario"><span class="span_li">
-                        <i id="icon_menu" onclick="exibir_menu()"  class=" fas fa-bars icon_menu"></i>
+                        <i id="icon_menu" onclick="exibir_menu()" class=" fas fa-bars icon_menu"></i>
                     </span>
                 </li>
             </ul>
             <ul id="dropbox" class="dropbox">
                 <li><span class="menu"><a href="Sobre_Fundador.html">Sobre Fundador</a></span></li> <br>
-                <li><span class="menu">Novidades</span></li> <br>
+                <li><span class="menu"><a href="Curiosidades.html">Curiosidades</a></span></li> <br>
                 <li><span class="menu"><a href="Aulas.html">Aulas</a></span></li> <br>
                 <li><span class="menu">Sair</span></li>
             </ul>
@@ -51,7 +51,7 @@
             </div> <br>
             <span>Senha:</span>
             <div class="div_input">
-                <input  id="senha_cadastro" name="senha" type="password" placeholder="Digite uma senha...">
+                <input id="senha_cadastro" name="senha" type="password" placeholder="Digite uma senha...">
                 <i id="eye_ver_senha" onclick="ver_senha()" class="far fa-eye" style="font-size: 15px;"></i>
                 <i id="eye_ocultar_senha" onclick="ocultar_senha()" class="far fa-eye-slash"
                     style="font-size: 12px;display: none;"></i>
@@ -67,27 +67,20 @@
             <div class="div_input">
                 <input name="nickname" type="text" placeholder="Crie um nickname...">
                 <i class="fas fa-asterisk" style="font-size: 10px; color: rgba(255,0,0,0.8);"></i>
-            </div> <br>
-          <!--  <span>Perfil do usuário:</span>
-           <div class="div_input">
-                <select name="perfil" id="select_perfil">
-                    <option value="Estudante">Estudante</option>
-                    <option value="Admnistrador">Admnistrador</option>
-                </select>
-            </div> --> <br>
+            </div> <br><br>
             <button type="submit" class="button_cad">Cadastrar já!</button>
-            <span onclick="logar()" class="tem_conta">Eu já tenho uma conta!</span>
+            <span onclick="ir_login()" class="tem_conta">Eu já tenho uma conta!</span>
         </form>
     </div>
     <!--FIM DA ÁREA DE CADASTRO-->
 
     <!--ÁREA DE LOGIN-->
-    <form id="cerca_login" method="POST" class="cerca_cadastro">
+    <form id="cerca_login" method="POST" onsubmit="return entrar()" class="cerca_cadastro">
         <span>Login</span>
         <div class="cadastro">
             <div class="user">
                 <div class="icon_usuario">
-                <i class="fas fa-user-circle" style="font-size: 150px;"></i>
+                    <i class="fas fa-user-circle" style="font-size: 150px;"></i>
                 </div>
             </div>
             <span>Login:</span>
@@ -98,11 +91,11 @@
             <div class="div_input">
                 <input name="senha" type="password" id="senha_login" placeholder="Digite sua senha...">
                 <i id="olho_aberto" onclick="fechar_olho()" class="far fa-eye" style="font-size: 15px;"></i>
-                <i id="olho_fechado" onclick="abrir_olho()"  class="far fa-eye-slash"
-                    style="font-size: 12px;display: none;"></i>
-            </div>
-            <div class="user_">
-                <button onclick="logar()" class="fazer_login"><a href="Pag-Inicial.html">Fazer Login!</a></button>
+                <i id="olho_fechado" onclick="abrir_olho()" class="far fa-eye-slash"
+                    style="font-size: 12px;display: none;"></i> <br>
+                </div>
+                <div class="user_">
+                <button type="submit" class="fazer_login">Fazer Login!</button>
                 <span onclick="ir_cadastro()" class="nao_tem_conta">Ainda não tenho uma conta!</span>
             </div>
         </div>
@@ -113,12 +106,12 @@
 
 </html>
 <script>
-      function ver_senha() {
+    function ver_senha() {
         senha_cadastro.type = 'text';
         eye_ver_senha.style.display = 'none';
         eye_ocultar_senha.style.display = 'block';
     }
-    function fechar_olho(){
+    function fechar_olho() {
         senha_login.type = 'text';
         olho_aberto.style.display = 'none';
         olho_fechado.style.display = 'block';
@@ -129,20 +122,17 @@
         eye_ver_senha.style.display = 'flex';
         eye_ocultar_senha.style.display = 'none';
     }
-    function abrir_olho(){
+    function abrir_olho() {
         senha_login.type = 'password';
         olho_aberto.style.display = 'flex';
         olho_fechado.style.display = 'none';
     }
 
-    function logar() {
-        var nome = login.value;
-        var senha = senha_login.value;
-        if (nome == 'Hanan' && senha == '123456') {
-            alert('Você será redirecionado para a página inicial!');
-            window.location.href = `./Pag-Inicial.html`;
-        } 
-    } 
+    function ir_login() {
+        cerca_cadastro.style.display = 'none';
+        cerca_login.style.display = 'flex';
+    }
+
     var dropar = false;
     function exibir_menu() {
         if (dropar) {
@@ -153,14 +143,16 @@
         dropar = !dropar;
     }
 
-    function cadastrar(){
+
+
+    function cadastrar() {
 
         var formulario = new URLSearchParams(new FormData(cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
             body: formulario
         }).then(function (response) {
-            
+
             if (response.ok) {
                 window.location.reload();
             } else {
@@ -176,12 +168,44 @@
 
     }
 
+    function entrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(cerca_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.senha;
+
+                    window.location.href = 'Login_Cadastro.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+
+
+
+
     function ir_cadastro() {
         cerca_cadastro.style.display = 'flex';
         cerca_login.style.display = 'none';
-    }
-    function logar() {
-        cerca_cadastro.style.display = 'none';
-        cerca_login.style.display = 'flex';
     }
 </script>

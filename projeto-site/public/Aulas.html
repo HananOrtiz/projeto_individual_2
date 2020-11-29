@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="./css_do_site/Aulas.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Radley:ital@1&display=swap"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Radley:ital@1&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/3da87a59e6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <!-- INICIO DO TOPO DO SITE-->
-    <div class="container">
+    <div id="container" class="container">
         <div class="cabecario">
             <span class="nome_jornal">
                 <span class="BS">B</span>and<span class="BS">S</span>tudents
@@ -32,22 +33,23 @@
             </ul>
             <ul id="dropbox" class="dropbox">
                 <li><span class="menu"><a href="Sobre_Fundador.html">Sobre Fundador</a></span></li> <br>
-                <li><span class="menu">Novidades</span></li> <br>
+                <li><span class="menu"><a href="Curiosidades.html">Curiosidades</span></li> <br>
                 <li><span class="menu"><a href="Aulas.html">Aulas</a></span></li> <br>
                 <li><span class="menu">Sair</span></li>
             </ul>
         </div>
     </div>
     <!--FIM DO TOPO DO SITE-->
-    <div class="espacamento"></div>
     <div class="cerca_aulas">
         <div class="container_guia_aulas">
 
             <div class="opcoes_de_aula">
+                <div class="espaco_E2"></div>
+                <span class="o_que_aprender">O que iremos aprender hoje?</span> <br><br>
                 <span class="titulo_categoria">
-                    LINGUAGENS DE PROGRAMAÇÃO
+                    <span class="categoria"> LINGUAGENS DE PROGRAMAÇÃO</span>
                     <i onclick="dropar_linguagem_programacao()" class="fas fa-chevron-circle-right icon_chevron_right"
-                     style="color:  rgba(173, 11, 79,1);font-size: 25px;"></i>
+                        style="color:  rgba(173, 11, 79,1);font-size: 25px;"></i>
                 </span>
 
                 <div class="espaco_E1">
@@ -56,32 +58,53 @@
                 <div id="drop_lista_linguagem" style="display: none;" class="drop_lista_linguagem">
                     <br>
 
-                    <span class="lista_linguagens"> ✦ HTML </span>  <br><br>
+                    <span class="lista_linguagens"> ✦ HTML/JavaScript </span> <br><br>
+                    <span class="lista_linguagens"> ✦ HTML </span> <br><br>
                     <span class="lista_linguagens"> ✦ JavaScript </span> <br><br>
-                    <span class="lista_linguagens"> ✦ CSS </span>  <br><br>
+                    <span class="lista_linguagens"> ✦ CSS </span> <br><br>
                 </div> <br>
 
                 <span class="titulo_categoria">
-                    ARQUITETURA COMPUTACIONAL
+                    <span class="categoria">ARQUITETURA COMPUTACIONAL</span>
                     <i onclick="dropar_arq_comp()" class="fas fa-chevron-circle-right icon_chevron_right"
-                     style="color:  rgba(173, 11, 79,1);font-size: 25px;"></i>
+                        style="color:  rgba(173, 11, 79,1);font-size: 25px;"></i>
                 </span>
                 <div id="drop_arq_comp" class="drop_arq_comp" style="display: none;">
                     <br>
 
-                <span class="lista_linguagens">✦ Portas Lógicas</span> <br><br>
-                <span class="lista_linguagens">✦ Conversão numérica</span> <br><br>
-                <span class="lista_linguagens">✦ API</span> <br><br>
+                    <span class="lista_linguagens">✦ Portas Lógicas</span> <br><br>
+                    <span class="lista_linguagens">✦ Conversão numérica</span> <br><br>
+                    <span class="lista_linguagens">✦ API</span> <br><br>
                 </div> <br>
 
             </div>
 
+        </div>
+        <div class="cerca_conteudo">
+            <div class="espaco_E2"></div>
+            <div class="conteudo_pagina">
+                    <h1>Aqui você encontra uma força extra para seus estudos!</h1>
+                    <div class="introducao">
+                        O BandStudents está aqui para dar apoio ao seu primeiro pé no mundo da programação. <br>
+                        <p> Nesse site você econtrará tópicos sobre assuntos e temas que poderão te ajudar nos seus
+                            estudos
+                            e a impulsionar o seu avanço no conhecimento.
+                        </p>
+                        <p> Vale destacar que muita das informações encontradas neste site são conhecimentos e
+                            experiências compartilhados por pessoas que participaram/participam do projeto
+                            e que sabem o quão importante é obter o maior número de informações sobre o que estamos
+                            aprendendo 
+                        </p>
+
+                    </div>
+            </div>
         </div>
     </div>
 </body>
 
 </html>
 <script>
+
     var dropar_menu = false;
     var dropar_ling = false;
     var dropar_arq = false;

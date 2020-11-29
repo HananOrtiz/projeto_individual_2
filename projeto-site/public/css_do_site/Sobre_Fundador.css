@@ -70,3 +70,13 @@ body{
 .fase_vida{
     font: 600 22px Radley, serif;
 }
+.div_das_imagens{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+}
+.img_fim{
+    margin: 2%;
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+}
