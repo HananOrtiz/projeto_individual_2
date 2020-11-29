@@ -169,7 +169,7 @@
     }
 
     function entrar() {
-        aguardar();
+      //  aguardar();
         var formulario = new URLSearchParams(new FormData(cerca_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -180,10 +180,10 @@
 
                 resposta.json().then(json => {
 
-                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.login_usuario_meuapp = json.nickname;
                     sessionStorage.nome_usuario_meuapp = json.senha;
 
-                    window.location.href = 'Login_Cadastro.html';
+                    window.location.href = 'index.html';
                 });
 
             } else {
@@ -192,7 +192,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizar_aguardar(texto);
+           //         finalizar_aguardar(texto);
                 });
             }
         });

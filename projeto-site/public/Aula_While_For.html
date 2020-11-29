@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulas: While e For - BS</title>
+</head>
+
+<body>
+    Solicite o nome do usuário e tenha um botão que ao clicar
+    sorteie um número de 20 a 90... <br>
+    Após clicar nesse botão: <br><br>
+    Adicione esse número a uma lista de números que já foram sorteados,
+    Exiba esse número sorteado; <br>
+    Exiba a tabuada desse número do 1 ao 10; <br>
+    Diga se esse número é par ou impar... <br><br>
+
+    <input id=numero_desejado type="text" placeholder="Qual numero deseja encontrar no sorteio?"> <br><br>
+
+    <button onclick="fazer_mágica()">SORTEAR NÚMERO</button> <br><br>
+
+    <div id="resultado_sorteio"></div>
+
+
+
+</body>
+
+</html>
+<script>
+    var lista_numeros_sorteados = [];
+
+    function fazer_mágica() {
+        resultado_sorteio.innerHTML = '';
+        var numero_sorteado = parseInt((Math.random() * 70) + 20);
+        
+        lista_numeros_sorteados.push(numero_sorteado);
+        resultado_sorteio.innerHTML += `<span style="color:black;"">
+            O número sorteado foi <b><u>${numero_sorteado}</u></b>.</span><br><br>`;
+            for ( var contar = 0; contar <= 10; contar++) {
+                var multiplicacao = numero_sorteado * contar;
+            if (multiplicacao % 2 == 0) {
+                resultado_sorteio.innerHTML += `${numero_sorteado} X ${contar} = ${multiplicacao}
+                <span style="color:green;"> (O RESULTADO É PAR)</span><br>`;
+            } else {
+                resultado_sorteio.innerHTML += `${numero_sorteado} X ${contar} = ${multiplicacao}
+                <span style="color: red;"> (O RESULTADO É IMPAR)</span><br>`;
+            }
+        }
+        resultado_sorteio.innerHTML += `
+        <br><br> ${lista_numeros_sorteados}<br><br>
+        A sua lista já tem ${lista_numeros_sorteados.length} itens. <br>
+        O primeiro numero a ser sorteado : ${lista_numeros_sorteados[0]} <br>
+        O último numero a ser sorteado : ${lista_numeros_sorteados[lista_numeros_sorteados.length - 1]}
+        `;
+        
+
+    }
+</script>

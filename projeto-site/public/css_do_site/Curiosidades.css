@@ -8,6 +8,8 @@
     align-items: center;
     min-height: 100vh;
     width: 100%;
+    background-image:url(../imagens/interrogacao_1.jpg);
+    background-size: 1000px; 
 }
 .cerca_feed{
     display: flex;
@@ -22,6 +24,7 @@
     border: 2px solid;
     padding: 8px;
     width: 80%;
+    background-color: white;
 }
 .caixa_curiosidade1 h2{
     font: 600 27px Righteous;
@@ -40,6 +43,7 @@
     border: 2px solid;
     width: 80%;
     padding: 8px;
+    background-color: white;
 }
 
 
