@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3da87a59e6.js" crossorigin="anonymous"></script>
+    <script src="./verificacao.js"></script>
 </head>
 
 <body>
@@ -180,8 +181,8 @@
 
                 resposta.json().then(json => {
 
-                    sessionStorage.login_usuario_meuapp = json.nickname;
-                    sessionStorage.nome_usuario_meuapp = json.senha;
+                    sessionStorage.nickname = json.nickname;
+                    sessionStorage.senha = json.senha;
 
                     window.location.href = 'index.html';
                 });
